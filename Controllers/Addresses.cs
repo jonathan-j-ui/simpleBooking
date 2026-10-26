@@ -3,6 +3,8 @@ using simpleBooking.Models;
 
 namespace simpleBooking.Controllers;
 
+[ApiController]
+[Route("/api/[controller]")]
 public class AddressesController : ControllerBase
 {
     private AddressBook _addressBook;
