@@ -19,7 +19,7 @@ public AddressBook()
         {
             Id = 1,
             FirstName = "Stefan",
-            MiddleName = "Erik",
+            LastName = "Eriksson",
             Email = "stefan@example.com",
             Country = Country.Sweden,
             PhoneNumber = 701234567,
@@ -29,7 +29,7 @@ public AddressBook()
         {
             Id = 2,
             FirstName = "Malin",
-            MiddleName = "Sofia",
+            LastName = "Nilsson",
             Email = "malin@example.com",
             Country = Country.Sweden,
             PhoneNumber = 702345678,
@@ -39,7 +39,7 @@ public AddressBook()
         {
             Id = 3,
             FirstName = "Anna",
-            MiddleName = "Maria",
+            LastName = "Mare",
             Email = "anna@example.com",
             Country = Country.Sweden,
             PhoneNumber = 703456789,
@@ -56,7 +56,7 @@ public AddressBook()
         {
             Id = 4,
             FirstName = "Lars",
-            MiddleName = "Magnus",
+            LastName = "Hammar",
             Email = "lars@example.com",
             Country = Country.Norway,
             PhoneNumber = 41234567,
@@ -73,7 +73,7 @@ public AddressBook()
         {
             Id = 5,
             FirstName = "Ingrid",
-            MiddleName = "Elise",
+            LastName = "Alesdotter",
             Email = "ingrid@example.com",
             Country = Country.Norway,
             PhoneNumber = 42345678,
@@ -90,7 +90,7 @@ public AddressBook()
         {
             Id = 6,
             FirstName = "Frederik",
-            MiddleName = "Christian",
+            LastName = "Christiansen",
             Email = "frederik@example.com",
             Country = Country.Denmark,
             PhoneNumber = 23456789,
@@ -107,7 +107,7 @@ public AddressBook()
         {
             Id = 7,
             FirstName = "Sofie",
-            MiddleName = "Marie",
+            LastName = "Larsen",
             Email = "sofie@example.com",
             Country = Country.Denmark,
             PhoneNumber = 34567890,
