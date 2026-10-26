@@ -31,3 +31,81 @@ li h1 {
 
 li p {
 }
+
+li span.tag.flag {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    vertical-align: middle;
+    box-shadow:
+        0 0 0 2px white,
+        0 2px 6px rgb(0 0 0 / 15%);
+}
+
+/* Sweden = 0 */
+li span.tag.flag.country-0 {
+    background:
+        linear-gradient(
+            to right,
+            transparent 30%,
+            #fecc00 30% 44%,
+            transparent 44%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 43%,
+            #fecc00 43% 57%,
+            transparent 57%
+        ),
+        #006aa7;
+}
+
+/* Norway = 1 */
+li span.tag.flag.country-1 {
+    background:
+        linear-gradient(
+            to right,
+            transparent 33%,
+            #00205b 33% 41%,
+            transparent 41%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 46%,
+            #00205b 46% 54%,
+            transparent 54%
+        ),
+        linear-gradient(
+            to right,
+            transparent 27%,
+            white 27% 47%,
+            transparent 47%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 40%,
+            white 40% 60%,
+            transparent 60%
+        ),
+        #ba0c2f;
+}
+
+/* Denmark = 2 */
+li span.tag.flag.country-2 {
+    background:
+        linear-gradient(
+            to right,
+            transparent 30%,
+            white 30% 44%,
+            transparent 44%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 43%,
+            white 43% 57%,
+            transparent 57%
+        ),
+        #c8102e;
+}

@@ -19,6 +19,7 @@ async function loadPeople() {
             item.innerHTML = `
                 <h1>${person.firstName} ${person.lastName}</h1>
                 <p><span class="tag">${person.email}</span></p>
+                <span class="tag flag country-${person.country}" role="img"></span>
             `;
 
             list.appendChild(item);
