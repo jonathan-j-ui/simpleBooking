@@ -11,6 +11,10 @@ async function loadPeople() {
 
         const data = await response.json();
 
+        data.people.sort((a, b) =>
+            (a.lastName ?? "").localeCompare(b.lastName ?? "")
+        );
+
         list.replaceChildren();
 
         for (const person of data.people) {
@@ -22,6 +26,10 @@ async function loadPeople() {
                 <td>${person.firstName} ${person.lastName}</td>
                 
                 <td>${person.email}</td>
+
+                <td>${person.phoneNumber}</td>
+
+                <td></td>
             `;
 
             list.appendChild(item);
