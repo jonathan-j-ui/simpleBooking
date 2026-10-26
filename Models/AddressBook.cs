@@ -2,117 +2,126 @@ namespace simpleBooking.Models;
 
 public class AddressBook
 {
-    public AddressBook()
+public AddressBook()
+{
+    var sharedAddress = new Address
     {
-        People = new List<Person>
+        Id = 1,
+        Street = "Avenyn",
+        StreetNo = 25,
+        City = "Göteborg",
+        PostalCode = 41136
+    };
+
+    People = new List<Person>
+    {
+        new()
         {
-            new()
+            Id = 1,
+            FirstName = "Stefan",
+            MiddleName = "Erik",
+            Email = "stefan@example.com",
+            Country = Country.Sweden,
+            PhoneNumber = 701234567,
+            Address = sharedAddress
+        },
+        new()
+        {
+            Id = 2,
+            FirstName = "Malin",
+            MiddleName = "Sofia",
+            Email = "malin@example.com",
+            Country = Country.Sweden,
+            PhoneNumber = 702345678,
+            Address = sharedAddress
+        },
+        new()
+        {
+            Id = 3,
+            FirstName = "Anna",
+            MiddleName = "Maria",
+            Email = "anna@example.com",
+            Country = Country.Sweden,
+            PhoneNumber = 703456789,
+            Address = new Address
             {
-                FirstName = "Stefan",
-                MiddleName = "Erik",
-                Email = "stefan@example.com",
-                Country = Country.Sweden,
-                PhoneNumber = 701234567,
-                Address = new Address
-                {
-                    Street = "Avenyn",
-                    StreetNo = 25,
-                    City = "Göteborg",
-                    PostalCode = 41136
-                }
-            },
-            new()
-            {
-                FirstName = "Malin",
-                MiddleName = "Sofia",
-                Email = "malin@example.com",
-                Country = Country.Sweden,
-                PhoneNumber = 702345678,
-                Address = new Address
-                {
-                    Street = "Avenyn",
-                    StreetNo = 25,
-                    City = "Göteborg",
-                    PostalCode = 41136
-                }
-            },
-            new()
-            {
-                FirstName = "Anna",
-                MiddleName = "Maria",
-                Email = "anna@example.com",
-                Country = Country.Sweden,
-                PhoneNumber = 703456789,
-                Address = new Address
-                {
-                    Street = "Storgatan",
-                    StreetNo = 8,
-                    City = "Malmö",
-                    PostalCode = 21141
-                }
-            },
-            new()
-            {
-                FirstName = "Lars",
-                MiddleName = "Magnus",
-                Email = "lars@example.com",
-                Country = Country.Norway,
-                PhoneNumber = 41234567,
-                Address = new Address
-                {
-                    Street = "Storgata",
-                    StreetNo = 15,
-                    City = "Oslo",
-                    PostalCode = 184
-                }
-            },
-            new()
-            {
-                FirstName = "Ingrid",
-                MiddleName = "Elise",
-                Email = "ingrid@example.com",
-                Country = Country.Norway,
-                PhoneNumber = 42345678,
-                Address = new Address
-                {
-                    Street = "Strandgaten",
-                    StreetNo = 42,
-                    City = "Bergen",
-                    PostalCode = 5004
-                }
-            },
-            new()
-            {
-                FirstName = "Frederik",
-                MiddleName = "Christian",
-                Email = "frederik@example.com",
-                Country = Country.Denmark,
-                PhoneNumber = 23456789,
-                Address = new Address
-                {
-                    Street = "Nørrebrogade",
-                    StreetNo = 18,
-                    City = "København",
-                    PostalCode = 2200
-                }
-            },
-            new()
-            {
-                FirstName = "Sofie",
-                MiddleName = "Marie",
-                Email = "sofie@example.com",
-                Country = Country.Denmark,
-                PhoneNumber = 34567890,
-                Address = new Address
-                {
-                    Street = "Vestergade",
-                    StreetNo = 7,
-                    City = "Aarhus",
-                    PostalCode = 8000
-                }
+                Id = 2,
+                Street = "Storgatan",
+                StreetNo = 8,
+                City = "Malmö",
+                PostalCode = 21141
             }
-        };
-    }
+        },
+        new()
+        {
+            Id = 4,
+            FirstName = "Lars",
+            MiddleName = "Magnus",
+            Email = "lars@example.com",
+            Country = Country.Norway,
+            PhoneNumber = 41234567,
+            Address = new Address
+            {
+                Id = 3,
+                Street = "Storgata",
+                StreetNo = 15,
+                City = "Oslo",
+                PostalCode = 184
+            }
+        },
+        new()
+        {
+            Id = 5,
+            FirstName = "Ingrid",
+            MiddleName = "Elise",
+            Email = "ingrid@example.com",
+            Country = Country.Norway,
+            PhoneNumber = 42345678,
+            Address = new Address
+            {
+                Id = 4,
+                Street = "Strandgaten",
+                StreetNo = 42,
+                City = "Bergen",
+                PostalCode = 5004
+            }
+        },
+        new()
+        {
+            Id = 6,
+            FirstName = "Frederik",
+            MiddleName = "Christian",
+            Email = "frederik@example.com",
+            Country = Country.Denmark,
+            PhoneNumber = 23456789,
+            Address = new Address
+            {
+                Id = 5,
+                Street = "Nørrebrogade",
+                StreetNo = 18,
+                City = "København",
+                PostalCode = 2200
+            }
+        },
+        new()
+        {
+            Id = 7,
+            FirstName = "Sofie",
+            MiddleName = "Marie",
+            Email = "sofie@example.com",
+            Country = Country.Denmark,
+            PhoneNumber = 34567890,
+            Address = new Address
+            {
+                Id = 6,
+                Street = "Vestergade",
+                StreetNo = 7,
+                City = "Aarhus",
+                PostalCode = 8000
+            }
+        }
+    };
+}
 
     public List<Person> People { get; set; }
 }
