@@ -15,10 +15,10 @@ public class AddressBook
                 PhoneNumber = 701234567,
                 Address = new Address
                 {
-                    Street = "Sveavägen",
-                    StreetNo = 10,
-                    City = "Stockholm",
-                    PostalCode = 11157
+                    Street = "Avenyn",
+                    StreetNo = 25,
+                    City = "Göteborg",
+                    PostalCode = 41136
                 }
             },
             new()
