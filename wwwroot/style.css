@@ -9,45 +9,6 @@ body {
     font-family: Arial, sans-serif;
     color: #30243d;
     background: #fff3ed;
-    isolation: isolate;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            ellipse at 0% 100%,
-            #ffb49e 0%,
-            transparent 65%
-        ),
-        radial-gradient(
-            ellipse at 100% 0%,
-            #b5c5ff 0%,
-            transparent 65%
-        ),
-        radial-gradient(
-            ellipse at 65% 90%,
-            #e9b5ed 0%,
-            transparent 70%
-        ),
-        #fff3ed;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.05;
-
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23noise)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
-    background-size: 180px 180px;
 }
 
 ul {
@@ -59,10 +20,7 @@ li {
     list-style: none;
     margin: 0 0 12px;
     padding: 20px;
-    border: 1px solid rgb(255 255 255 / 70%);
-    border-radius: 16px;
-    background: rgb(255 255 255 / 65%);
-    box-shadow: 0 4px 20px rgb(48 36 61 / 5%);
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);
 }
 
 li h1 {
@@ -72,14 +30,4 @@ li h1 {
 }
 
 li p {
-    line-height: 1.5;
-}
-
-li span.tag {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 9999px;
-    background: #eee6f5;
-    color: #584369;
-    font-size: 13px;
 }
