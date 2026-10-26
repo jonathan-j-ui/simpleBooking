@@ -7,7 +7,7 @@ public class Person
     public Address? Address { set; get; }
     public string? Email { set; get; }
     public Country? Country { set; get; }
-    
+    public int? PhoneNumber { set; get; }
 }
 
 public enum Country
