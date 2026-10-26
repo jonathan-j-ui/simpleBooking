@@ -14,13 +14,7 @@ public class AddressesController : ControllerBase
         _addressBook = addressBook;
     }
 
-    [HttpGet("people")]
-    public AddressBook GetAllPeople()
-    {
-        return _addressBook;
-    }
-
-    [HttpGet("addresses")]
+    [HttpGet]
     public IActionResult GetAllAddresses()
     {
         var addresses = new Dictionary<(string? Street, int? StreetNo, string? City, int? PostalCode), int>();
