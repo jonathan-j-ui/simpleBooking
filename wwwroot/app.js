@@ -14,12 +14,14 @@ async function loadPeople() {
         list.replaceChildren();
 
         for (const person of data.people) {
-            const item = document.createElement("li");
+            const item = document.createElement("tr");
 
             item.innerHTML = `
-                <h1>${person.firstName} ${person.lastName}</h1>
-                <p><span class="tag">${person.email}</span></p>
-                <span class="tag flag country-${person.country}" role="img"></span>
+                <td><span class="tag flag country-${person.country}" role="img"></span></td>
+
+                <td>${person.firstName} ${person.lastName}</td>
+                
+                <td>${person.email}</td>
             `;
 
             list.appendChild(item);

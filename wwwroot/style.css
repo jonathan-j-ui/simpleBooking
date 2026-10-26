@@ -11,28 +11,19 @@ body {
     background: #FFF;
 }
 
-ul {
+tr {
     margin: 0;
     padding: 0;
 }
 
-li {
+td {
     list-style: none;
     margin: 0 0 12px;
     padding: 20px;
     border-bottom: 1px solid rgba(216, 216, 216, 0.7);
 }
 
-li h1 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-li p {
-}
-
-li span.tag.flag {
+td span.tag.flag {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -45,7 +36,7 @@ li span.tag.flag {
 }
 
 /* Sweden = 0 */
-li span.tag.flag.country-0 {
+span.tag.flag.country-0 {
     background:
         linear-gradient(
             to right,
@@ -63,7 +54,7 @@ li span.tag.flag.country-0 {
 }
 
 /* Norway = 1 */
-li span.tag.flag.country-1 {
+span.tag.flag.country-1 {
     background:
         linear-gradient(
             to right,
@@ -93,7 +84,7 @@ li span.tag.flag.country-1 {
 }
 
 /* Denmark = 2 */
-li span.tag.flag.country-2 {
+span.tag.flag.country-2 {
     background:
         linear-gradient(
             to right,
