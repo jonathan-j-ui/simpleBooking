@@ -19,4 +19,12 @@ public class PeopleController : ControllerBase
     {
         return _addressBook;
     }
+
+    [HttpGet("id/{id}")]
+    public Person GetPersonById(int id)
+    {
+        var person = _addressBook.People.Find(p => p.Id == id);
+        
+        return person;
+    }
 }
