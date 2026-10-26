@@ -27,9 +27,9 @@ async function loadPeople() {
                 
                 <td>${person.email}</td>
 
-                <td>${person.phoneNumber}</td>
+                <td><span class="icon-phone" aria-hidden="true"></span> ${person.phoneNumber}</td>
 
-                <td></td>
+                <td>${person.address.street} ${person.address.streetNo}, ${person.address.postalCode} ${person.address.city}</td>
             `;
 
             list.appendChild(item);
