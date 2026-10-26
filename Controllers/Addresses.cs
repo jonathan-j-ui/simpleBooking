@@ -5,7 +5,7 @@ namespace simpleBooking.Controllers;
 
 public class AddressesController : ControllerBase
 {
-    private List<Address> _addressBook;
+    private AddressBook _addressBook;
 
     public AddressesController(AddressBook addressBook)
     {
