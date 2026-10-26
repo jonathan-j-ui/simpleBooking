@@ -51,12 +51,16 @@ public class AddressesController : ControllerBase
             }
         }
 
-        return Ok(addresses.Keys.Select(key => new Address
+        return Ok(addresses.Select(r => new
         {
-            Street = key.Street,
-            StreetNo = key.StreetNo,
-            City = key.City,
-            PostalCode = key.PostalCode
+            Address = new Address
+            {
+                Street = r.Key.Street,
+                StreetNo = r.Key.StreetNo,
+                City = r.Key.City,
+                PostalCode = r.Key.PostalCode
+            },
+            Count = r.Value
         }).ToList());
     }
 }
