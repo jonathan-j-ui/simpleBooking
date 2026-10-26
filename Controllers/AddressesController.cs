@@ -56,7 +56,7 @@ public class AddressesController : ControllerBase
 
             if(addresses.TryGetValue(address.Id, out var entry))
             {
-                addresses[address.Id] = (entry.Address, entry.Count);
+                addresses[address.Id] = (entry.Address, entry.Count + 1);
             }
             else
             {
