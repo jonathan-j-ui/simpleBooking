@@ -15,9 +15,15 @@ public class AddressesController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAllAddresses()
+    public IActionResult GetAllAddresses(
+        [FromQuery] string? street = null,
+        [FromQuery] int? streetNo = null,
+        [FromQuery] string? city = null,
+        [FromQuery] int? postalCode = null,
+        [FromQuery] Country? country = null
+    )
     {
-        var addresses = new Dictionary<(string? Street, int? StreetNo, string? City, int? PostalCode), int>();
+        var addresses = new Dictionary<int, (Address Address, int Count)>();
 
         foreach (var person in _addressBook.People)
         {
@@ -28,33 +34,40 @@ public class AddressesController : ControllerBase
                 continue;
             }
 
-            var key = (
-                address.Street,
-                address.StreetNo,
-                address.City,
-                address.PostalCode
-            );
-
-            if(addresses.TryGetValue(key, out int count))
+            if (street != null && !string.Equals(address.Street, street, StringComparison.OrdinalIgnoreCase))
             {
-                addresses[key] = count + 1;
+                continue;
+            }
+
+            if (city != null && !string.Equals(address.City, city, StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            if(postalCode.HasValue && address.PostalCode != postalCode.Value)
+            {
+                continue;
+            }
+
+            if (country.HasValue && person.Country != country.Value)
+            {
+                continue;
+            }
+
+            if(addresses.TryGetValue(address.Id, out var entry))
+            {
+                addresses[address.Id] = (entry.Address, entry.Count);
             }
             else
             {
-                addresses.Add(key, 1);
+                addresses.Add(address.Id, (address, 1));
             }
         }
 
-        return Ok(addresses.Select(r => new
+        return Ok(addresses.Values.Select(entry => new
         {
-            Address = new Address
-            {
-                Street = r.Key.Street,
-                StreetNo = r.Key.StreetNo,
-                City = r.Key.City,
-                PostalCode = r.Key.PostalCode
-            },
-            Count = r.Value
+            Address = entry.Address,
+            Count = entry.Count
         }).ToList());
     }
 }
