@@ -2,6 +2,7 @@ namespace simpleBooking.Models;
 
 public class Person
 {
+    public int? Id { set; get; }
     public string? FirstName{ set; get; }
     public string? MiddleName  { set; get; }
     public Address? Address { set; get; }
