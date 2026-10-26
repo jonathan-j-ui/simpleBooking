@@ -16,7 +16,10 @@ async function loadPeople() {
         for (const person of data.people) {
             const item = document.createElement("li");
 
-            item.textContent = `${person.firstName ?? ""} ${person.lastName ?? ""}` + ` - ${person.email ?? ""}`;
+            item.innerHTML = `
+                <h1>${person.firstName} ${person.lastName}</h1>
+                <p><span class="tag">${person.email}</span></p>
+            `;
 
             list.appendChild(item);
         }
