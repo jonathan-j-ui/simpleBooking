@@ -13,4 +13,10 @@ public class AddressesController : ControllerBase
     {
         _addressBook = addressBook;
     }
+
+    [HttpGet]
+    public AddressBook GetAllPeople()
+    {
+        return _addressBook;
+    }
 }
