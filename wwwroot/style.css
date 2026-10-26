@@ -18,5 +18,11 @@ li {
 }
 
 li h1 {
-    font-weight: bold;
+    font-size: medium;
+}
+
+li span.tag {
+    background-color: #ddd;
+    padding: 6px 16px;
+    border-radius: 9999px;
 }
